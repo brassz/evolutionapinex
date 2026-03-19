@@ -13,6 +13,10 @@ services:
       # opcional, mas recomendado para webhooks/links corretos
       - key: SERVER_URL
         sync: false
+      # Fix: some versions require an explicit provider when DATABASE_ENABLED=true (default).
+      # If you don't want an external DB, disable it to avoid startup failure.
+      - key: DATABASE_ENABLED
+        value: "false"
     disk:
       name: evolution-data
       mountPath: /evolution

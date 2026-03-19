@@ -14,6 +14,7 @@ No Render, configure as env vars:
 
 - `AUTHENTICATION_API_KEY` (obrigatório): sua chave (vai no header `apikey`)
 - `SERVER_URL` (recomendado): a URL pública do Render (ex.: `https://seu-servico.onrender.com`)
+- `DATABASE_ENABLED=false` (já vem setado no `render.yaml`): evita erro de provider de banco em algumas versões
 
 O `SERVER_PORT` já está fixado em `10000` para compatibilidade com o Render.
 
