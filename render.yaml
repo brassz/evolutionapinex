@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: evolutionapinex
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: AUTHENTICATION_API_KEY
+        sync: false
+      - key: SERVER_PORT
+        value: "10000"
+      # opcional, mas recomendado para webhooks/links corretos
+      - key: SERVER_URL
+        sync: false
+    disk:
+      name: evolution-data
+      mountPath: /evolution
+      sizeGB: 1
+
